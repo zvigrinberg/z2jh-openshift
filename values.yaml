@@ -36,7 +36,7 @@ hub:
     runAsUser: # let openshift set the value
     runAsGroup: # let openshift set the value
   image:
-    name: quay.io/jupyterhub/k8s-singleuser-sample
+    name: quay.io/jupyterhub/k8s-hub
     tag: 4.0.0-0.dev.git.6635.hecbe9b5b
 
 singleuser:
