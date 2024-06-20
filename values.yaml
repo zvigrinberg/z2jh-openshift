@@ -35,6 +35,9 @@ hub:
     <<: *security_context
     runAsUser: # let openshift set the value
     runAsGroup: # let openshift set the value
+  image:
+    name: quay.io/jupyterhub/k8s-singleuser-sample
+    tag: 4.0.0-0.dev.git.6635.hecbe9b5b
 
 singleuser:
   # startTimeout: 1200 # Extend because of large image size.
@@ -42,6 +45,9 @@ singleuser:
   fsGid:
   cloudMetadata:
     blockWithIptables: false
+  image:
+    name: quay.io/jupyterhub/k8s-singleuser-sample 
+    tag: 4.0.0-0.dev.git.6635.hecbe9b5b
 
 prePuller:
   containerSecurityContext:
@@ -54,6 +60,9 @@ prePuller:
       <<: *security_context
       runAsUser: # let openshift set the value
       runAsGroup: # let openshift set the value
+    image:
+      name: quay.io/jupyterhub/k8s-image-awaiter
+      tag: 3.3.7
   pause:
     containerSecurityContext:
       <<: *security_context
